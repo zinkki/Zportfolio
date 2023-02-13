@@ -1,17 +1,17 @@
 const express = require('express');
 const app = express();
 const mysql = require('mysql');
-const PORT = process.env.port || 8080;
+const PORT = process.env.port;
 
 app.use(express.json());
 var cors = require('cors');
 app.use(cors());
 
 const db = mysql.createPool({
-	host:'localhost',
-	user:'root',
-	password:'1234',
-	database:'zinkki',
+	host: process.env.DB_HOST,
+	user: process.env.DB_USER,
+	password: process.env.DB_PASSWORD,
+	database: process.env.DB_DATABASE,
 });
 
 app.get('/api/list', (req,res) => {
