@@ -16,10 +16,11 @@ const db = mysql.createPool({
 });
 
 app.get('/api/list', (req,res) => {
-	const sqlQuery = 'SELECT * FROM board';
+	const sqlQuery = 'SELECT * FROM pofoDB.board';
 	db.query(sqlQuery, (err, result) => {
 		res.send(result);
 		console.log(result);
+		if(err) console.log(err);
 	});
 })
 
