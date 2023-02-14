@@ -1,11 +1,12 @@
+
+const dotenv = require('dotenv');
 const express = require('express');
 const app = express();
 const mysql = require('mysql');
-const PORT = process.env.port;
 
-app.use(express.json());
-var cors = require('cors');
-app.use(cors());
+dotenv.config();
+
+const PORT = process.env.PORT;
 
 const db = mysql.createPool({
 	host: process.env.DB_HOST,
