@@ -16,7 +16,7 @@ const db = mysql.createPool({
 });
 
 app.get('/', (req, res) => {
-	res.send('Hello NodeJS!');
+	res.send('Hello react~');
 })
 
 app.get('/api/list', (req,res) => {
