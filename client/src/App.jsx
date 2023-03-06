@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       
       <header className="App-header">
-        WELCOME zinkki-pofo g g 
+        WELCOME zinkki-pofo local
       </header>
       <Routes>
         <Route path='/' element={<Main></Main>} />
