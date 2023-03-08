@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       
       <header className="App-header">
-        WELCOME zinkki-pofo local
+        WELCOME zinkki! new branch test
       </header>
       <Routes>
         <Route path='/' element={<Main></Main>} />
