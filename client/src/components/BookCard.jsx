@@ -36,7 +36,7 @@ export default function BookCard() {
 		<div className="container">
 			<div className="row">
 				<div className="col-md-3">
-					<img alt='' src='https://bimage.interpark.com/partner/goods_image/2/5/3/1/356522531h.jpg' />
+					<img alt='' src='https://bimage.interpark.com/partner/goods_image/2/5/3/1/356522531h.jpg' /> 
 					<h6>제목 :</h6>
 					<p>dd</p>
 				</div>
