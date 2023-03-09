@@ -1,4 +1,3 @@
-
 const dotenv = require('dotenv');
 const express = require('express');
 const cors = require('cors');
@@ -6,7 +5,7 @@ const app = express();
 const mysql = require('mysql');
 
 const corsOptions = {
-    origin: 'http://localhost:3000/',
+    origin: 'http://book.interpark.com/',
     optionsSuccessStatus: 200,
     credentials: true
 }
