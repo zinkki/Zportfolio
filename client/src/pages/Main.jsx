@@ -1,15 +1,15 @@
-import { useEffect } from 'react';
-import axios from 'axios';
 import Navi from '../components/Nav';
-import BookCard from '../components/BookCard';
+import SideBar from '../components/SideBar';
+import MainCarousel from '../components/Carousel';
 
 
 export default function Main() {
 	
 	return (
 		<>
-        <Navi></Navi>
-        <BookCard></BookCard>
+			<MainCarousel></MainCarousel>
+			<Navi></Navi>
+			<SideBar></SideBar>
 		</>
 	)
 }
