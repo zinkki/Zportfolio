@@ -5,3 +5,9 @@
   background-color: #282c34;
   color: white;
 }
+
+.pagenation { 
+  display:flex;
+  justify-content: center;
+  margin-top: 15px;
+}
