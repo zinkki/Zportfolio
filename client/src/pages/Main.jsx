@@ -1,5 +1,3 @@
-//import Navi from '../components/Nav';
-//import SideBar from '../components/SideBar';
 import MainCarousel from '../components/Carousel';
 import { Routes, Route } from 'react-router-dom';
 import MainLayout from "../components/MainLayout"

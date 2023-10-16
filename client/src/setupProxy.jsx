@@ -6,7 +6,7 @@ module.exports = function (app) {
     "/api",
     createProxyMiddleware({
       //target: "http://zinkki.store:8080",
-      target: "http://localhost:8080",
+      target: "http://localhost:8081",
       changeOrigin: true,
     })
   );
