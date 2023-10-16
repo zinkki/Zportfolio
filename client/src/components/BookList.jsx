@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import BookModal from './BookModal';
+import { useState, useEffect } from "react";
+import axios from "axios";
+import BookModal from "./BookModal";
 
 export default function BookList() {
   const [modalShow, setModalShow] = useState(false);
@@ -27,11 +27,12 @@ export default function BookList() {
     },
   ]);
 
-	useEffect(() => {
+  useEffect(() => {
     axios
       .get(URL)
       .then((res) => {
         setBookInfo(res.data.item);
+        console.log(res.data.item);
         console.log("axios success!");
       })
       .catch(() => {
@@ -39,25 +40,38 @@ export default function BookList() {
       });
   }, []);
 
-	return (
-		<>
-		{/* <!-- Section --> */}
-		<section>
-        <header className="major">
-          <h2>BestSeller</h2>
+  return (
+    <>
+      {/* <!-- Section --> */}
+      <section>
+        <header className="">
+          <h2>실시간 인터파크 베스트셀러</h2>
         </header>
         <div className="posts">
           {bookInfo.length > 0
             ? bookInfo.map((bookInfo, idx) => (
-								<article key={idx}>
-                  <a onClick={() => { setModalShow(true); setBookId(idx); }} className="image">
+                <article key={idx}>
+                  <a
+                    onClick={() => {
+                      setModalShow(true);
+                      setBookId(idx);
+                    }}
+                    style={{ cursor: "pointer" }}
+                    className="image"
+                  >
                     <img src={bookInfo.coverLargeUrl} alt="" />
                   </a>
                   <h4>{bookInfo.title}</h4>
                   <p>{bookInfo.author}</p>
                   <ul className="actions">
                     <li>
-                      <div onClick={() => { setModalShow(true); setBookId(idx); }} className="button">
+                      <div
+                        onClick={() => {
+                          setModalShow(true);
+                          setBookId(idx);
+                        }}
+                        className="button"
+                      >
                         More
                       </div>
                     </li>
@@ -75,6 +89,6 @@ export default function BookList() {
           ) : null}
         </div>
       </section>
-		</>
-	)
+    </>
+  );
 }
