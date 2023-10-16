@@ -26,7 +26,7 @@
     "react-scripts": "5.0.1",
     "react-xml-parser": "^1.1.8",
     "request": "^2.88.2",
-    "styled-components": "^5.3.8",
+    "styled-components": "^5.3.9",
     "timers-browserify": "^2.0.12",
     "web-vitals": "^2.1.4",
     "webpack-dev-server": "^4.11.1",
